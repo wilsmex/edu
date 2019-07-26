@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=roboto);
+
+body {
+  background:#333;
+  font-size: 22px;
+  line-height: 32px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word !important;
+  font-family: 'roboto', sans-serif;
+}
+
+a {
+  color: #FFF;
+}
+
+p {
+  text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: #515f9c;
+}
+
+#logo {
+  display: block;
+  padding: 0 30px;
+  float: left;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+
+#main-toggle {
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.nav-icon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 18px;
+}
+
+.nav-icon:before,
+.nav-icon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-icon:before {
+  top: 5px;
+}
+
+.nav-icon:after {
+  top: -5px;
+}
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+nav ul li {
+  margin: 0px;
+  display: inline-block;
+  float: left;
+  background-color: #515f9c;
+}
+
+nav a {
+  display: block;
+  padding: 0 20px;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 60px;
+  text-decoration: none;
+}
+
+nav ul li ul li:hover {
+  background: #7083d8;
+}
+
+nav a:hover {
+  background-color: #7083d8;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 60px;
+}
+
+nav ul li:hover>ul {
+  display: inherit;
+}
+
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  left: 170px;
+}
+
+li>a:after {
+  content: ' +';
+}
+
+li>a:only-child:after {
+  content: '';
+}
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+  nav {
+    margin: 0;
+  }
+  nav ul{
+    float:none;
+  }
+  .toggle+a,
+  .menu {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+    background-color: #515f9c;
+    padding: 0 20px;
+    color: #FFF;
+    font-size: 20px;
+    line-height: 60px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .toggle:hover {
+    background-color: #7083d8;
+  }
+
+  [id^=drop]:checked+ul {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav ul ul ul a {
+    background-color: #141625;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #1f243b;
+  }
+
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+  }
+
+  nav ul ul li:hover>ul,
+  nav ul li:hover>ul {
+    display: none;
+  }
+
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+
+  }
+}
