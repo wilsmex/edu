@@ -1,0 +1,21 @@
+p::first-letter{
+   font-weight: bold;
+}
+
+p::first-line{
+    color: green;
+}
+
+p::before {
+    content: "[";
+}
+p::after {
+   content: " ]";
+}
+p *{
+    border:1px solid blue;
+}
+
+p .read_more::after {
+    content: "...";
+}

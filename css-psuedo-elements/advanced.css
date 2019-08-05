@@ -1,0 +1,36 @@
+body{
+    background-color:gray;
+}
+#test{
+    width: 200px;
+    height:200px;
+    position:relative;
+    margin:100px auto;
+    background-color:white;
+}
+#test::before{
+    display:block;
+    position:absolute;
+    content: " ";
+    box-shadow:-5px 5px 5px rgba(0,0,0,.5);
+    width:100px;
+    height:25px;
+    bottom:3px;
+    left:8px;
+    transform:skew(0deg,-4deg);
+    z-index:-5;
+    
+    
+}
+#test::after{
+    display:block;
+    position:absolute;
+    content: " ";
+    box-shadow:5px 5px 5px rgba(0,0,0,.5);;
+    width:100px;
+    height:25px;
+    bottom:3px;
+    right:8px;
+    transform:skew(0deg,4deg);
+    z-index:-5;
+}
