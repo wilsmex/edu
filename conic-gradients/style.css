@@ -1,0 +1,162 @@
+body {
+    margin:0;
+    padding:0;
+background: #0ac
+repeating-conic-gradient(hsla(0,0%,100%,.2) 0 15deg, hsla(0,0%,100%,0) 0 30deg);
+}
+div{
+    margin:20px;
+    width:250px;
+    height:250px;
+    display:flex;
+}
+
+
+
+
+
+
+
+
+
+
+#one{
+    background: conic-gradient(red,blue);
+}
+
+
+
+
+
+
+
+#two{
+    background: conic-gradient(
+     red 48deg, green 48deg 195deg, blue 195deg);
+    border-radius: 50%
+}
+
+
+
+
+
+
+
+#three{
+    background: conic-gradient(from 0deg at -5% 25%, red, green, blue 180deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#four{
+    background:
+    conic-gradient(#fff 0.25turn, #bbb 0.25turn 0.5turn, #fff 0.5turn 0.75turn, #bbb 0.75turn)
+    top left / 10% 10% repeat;
+    outline: 1px solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#five{
+    background: conic-gradient(from -28deg, white,black 180deg,white);
+    border-radius:50%;
+    transition:all .5s;
+    transform:rotate(0deg);
+
+
+}
+#five:hover{
+    background: conic-gradient(from -28deg, black,white 180deg,black);
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#button{
+    background: #2a3558;
+    position:relative;
+
+}
+[type='checkbox'] {
+    display: none;
+}
+
+
+label {
+    border: solid .25em transparent;
+    padding: 0.3125em;
+    width: 3em;
+    height: 3em;
+    background: 
+        linear-gradient(#1a2238, #373944) content-box;
+    color: #5d6474;
+    font-size:75px;
+    text-align: center;
+    cursor: pointer;
+}
+
+label,
+label:before,
+label:after {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label:before,
+label:after {
+    z-index: -1;
+    content: '';
+}
+
+label:before {
+    width: 1.575em;
+    height: 1.575em;
+    box-shadow: 0 0 0 4px rgba(2, 5, 10, 0.7);
+    background: linear-gradient(#c8cbd4, #383c44);
+}
+
+label:after {
+    width: 1.45em;
+    height: 1.45em;
+    box-shadow: 0 2px 2px -1px #3a3d4b, 0 -2px 2px -1px #f5f4fd;
+    background: 
+    conic-gradient(rgba(213, 216, 225, 0.45), rgba(102, 108, 128, 0.45) 36deg, rgba(230, 231, 235, 0.45) 75deg, rgba(128, 128, 128, 0.45) 105deg, rgba(197, 199, 211, 0.45) 135deg, rgba(137, 140, 155, 0.45) 170deg, rgba(215, 222, 232, 0.45), rgba(120, 125, 144, 0.45) 230deg, rgba(198, 201, 210, 0.45) 280deg, rgba(146, 150, 163, 0.45) 310deg, rgba(213, 216, 225, 0.45)), 
+    repeating-radial-gradient(transparent, rgba(109, 114, 133, 0) 2px, rgba(109, 114, 133, 0.25) 3px, rgba(109, 114, 133, 0.25) 4px, rgba(109, 114, 133, 0) 5px) #cecfd6;
+}
+
+[type='checkbox']:checked+label:before {
+    box-shadow: 0 0 15px #39e78d;
+
+}
