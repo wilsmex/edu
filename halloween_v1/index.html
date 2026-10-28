@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halloween Puppet Pose Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="startup">
+        <div class="startup-card">
+            <h1>Halloween Puppet Pose Tracker</h1>
+            <p id="startup-status" role="status" aria-live="polite">Click Start, then allow your camera. An internet connection is needed to load pose tracking.</p>
+            <button id="start-button" type="button" disabled>Loading…</button>
+        </div>
+    </div>
+    
+    <!-- p5.js library -->
+    <script src="p5.min.js"></script>
+    <!-- ml5.js for BodyPose -->
+    <script src="ml5.min.js"></script>
+    <!-- Main sketch -->
+    <script src="sketch.js"></script>
+</body>
+</html>
+

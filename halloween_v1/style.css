@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    overflow: hidden;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+#canvas-container {
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+canvas {
+    display: block !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 10 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+/* Hide any canvas with display:none that might be visible */
+canvas[style*="display: none"] {
+    display: none !important;
+}
+
+/* Hide any extra canvases or graphics buffers that might be showing */
+canvas:not(:first-of-type) {
+    display: none !important;
+}
+
+#info {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px 30px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#info p {
+    margin: 0;
+    font-size: 18px;
+}
+
+#info strong {
+    color: #ff6b6b;
+    font-size: 20px;
+}
+
+#startup {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+#startup[hidden] {
+    display: none;
+}
+
+.startup-card {
+    max-width: 460px;
+    padding: 28px;
+    border-radius: 12px;
+    background: #161616;
+    text-align: center;
+}
+
+.startup-card h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.startup-card p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    padding: 12px 28px;
+    border: 0;
+    border-radius: 6px;
+    background: #ff9f43;
+    color: #171717;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#start-button:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
